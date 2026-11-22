@@ -1,1 +1,1 @@
-# SISITEMAS_EMPOTRADOS
+# Práctica 3: Controlador Máquina Expendedora
