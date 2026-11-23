@@ -67,6 +67,6 @@ Este mecanismo aumenta la robustez del sistema empotrado, ya que permite recuper
 
 Todos los temporizadores del programa se han implementado utilizando la función `millis()`, evitando el uso de `delay()`. De este modo, mientras el sistema espera a que transcurra un determinado tiempo (por ejemplo, durante la preparación de una bebida o al mostrar un mensaje en pantalla), puede seguir atendiendo el resto de tareas del programa, como la lectura de sensores, la ejecución de los threads o la detección de pulsaciones.
 
-## Vídeo del funcionamiento
+## Vídeo demostración
 
-
+https://drive.google.com/file/d/1CXM-PHiNK58n-oEckeZbQoZb8_DfP6mx/view?usp=drive_link
