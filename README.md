@@ -4,11 +4,15 @@ El objetivo de esta práctica es diseñar e implementar el controlador software 
 
 El sistema debe comportarse como un sistema empotrado de tiempo real: responder a eventos físicos (la presencia de un cliente, las pulsaciones del botón o los movimientos del joystick) sin quedarse bloqueado, por lo que no se permite el uso de delay(). Para ello se han aplicado las técnicas vistas en teoría y laboratorio: multitarea cooperativa con ArduinoThread, interrupciones hardware para medir con precisión la duración de las pulsaciones, un watchdog que recupera el sistema ante bloqueos y la lectura de sensores de forma periódica y no bloqueante.
 
-## Esquema Fritzing:
+## Esquema Fritzing
 
 <img width="2374" height="2313" alt="p3_bb (1)" src="https://github.com/user-attachments/assets/b1c90647-229c-4ecb-a180-7d7d64ce6a0f" />
 
-## Descripción del funcionamiento:
+## Montaje real
+
+<img width="1352" height="1012" alt="image" src="https://github.com/user-attachments/assets/502ab3e6-ea20-49cc-82df-409510b5c1e0" />
+
+## Descripción del funcionamiento
 
 El funcionamiento de la máquina se ha organizado mediante una máquina de estados. Para ello, el programa se divide en tres modos principales: Arranque, Servicio y Administrador. Cada uno de ellos se encarga de una parte concreta del funcionamiento de la máquina y permite separar claramente las distintas tareas del sistema. Además, tanto el modo Servicio como el modo Administrador se dividen en varios submodos, lo que facilita controlar la transición entre las diferentes pantallas y acciones de forma ordenada. A continuación, se explica cada una de estas secciones.
 
@@ -62,3 +66,7 @@ Este mecanismo aumenta la robustez del sistema empotrado, ya que permite recuper
 ### Uso de `millis()`
 
 Todos los temporizadores del programa se han implementado utilizando la función `millis()`, evitando el uso de `delay()`. De este modo, mientras el sistema espera a que transcurra un determinado tiempo (por ejemplo, durante la preparación de una bebida o al mostrar un mensaje en pantalla), puede seguir atendiendo el resto de tareas del programa, como la lectura de sensores, la ejecución de los threads o la detección de pulsaciones.
+
+## Vídeo del funcionamiento
+
+
