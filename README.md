@@ -4,12 +4,11 @@ El objetivo de esta práctica es diseñar e implementar el controlador software 
 
 El sistema debe comportarse como un sistema empotrado de tiempo real: responder a eventos físicos (la presencia de un cliente, las pulsaciones del botón o los movimientos del joystick) sin quedarse bloqueado, por lo que no se permite el uso de delay(). Para ello se han aplicado las técnicas vistas en teoría y laboratorio: multitarea cooperativa con ArduinoThread, interrupciones hardware para medir con precisión la duración de las pulsaciones, un watchdog que recupera el sistema ante bloqueos y la lectura de sensores de forma periódica y no bloqueante.
 
-ESQUEMA FRITZING:
+## Esquema Fritzing:
 
-<img width="2374" height="2313" alt="p3_bb" src="https://github.com/user-attachments/assets/17128ac7-5f78-4af7-b3be-23948a286c88" />
+<img width="2374" height="2313" alt="p3_bb (1)" src="https://github.com/user-attachments/assets/b1c90647-229c-4ecb-a180-7d7d64ce6a0f" />
 
-
-Descripción del funcionamiento:
+## Descripción del funcionamiento:
 
 El funcionamiento de la máquina se ha organizado mediante una máquina de estados. Para ello, el programa se divide en tres modos principales: Arranque, Servicio y Administrador. Cada uno de ellos se encarga de una parte concreta del funcionamiento de la máquina y permite separar claramente las distintas tareas del sistema. Además, tanto el modo Servicio como el modo Administrador se dividen en varios submodos, lo que facilita controlar la transición entre las diferentes pantallas y acciones de forma ordenada. A continuación, se explican cada una de estas secciones.
 
